@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>The Lazy Trumpet</title>
+  </head>
+  <body>
+    <div class="title">
+      <h1 id="title">The Lazy Trumpet</h1>
+      <p id="name">Ori Zur</p>
+      <p id="info">orizur2022@u.northwestern.edu</p>
+      <p id="info">Digital Musical Instrument Design, Northwestern University</p>
+      <p id="info">June 9, 2022</p>
+    </div>
+    <div class="images">
+      <img src="tpt_pic_1.JPG" alt="tpt_pic_1" width="20%">
+      <img src="tpt_pic_2.JPG" alt="tpt_pic_2" width="20%">
+      <img src="tpt_pic_3.JPG" alt="tpt_pic_3" width="20%">
+    </div>
+    <div class="what">
+
+      <h2>What is it?</h2>
+      <p id="what">Hello! My name is Ori Zur, and I'm the creator of The Lazy Trumpet. Before we get into all of the details, a little about me.
+      I've been a multi-instramentalist for the majority of my life now, but I've always played string or rhythm section instruments (piano, cello, guitar, bass, etc.).
+      The closest I've come to playing any woodwind or brass instruments is the melodica. I recently became insterested in learning how to play the trumpet,
+      but changed my mind when I realized how much work I would have to put in to learn not only the fingerings, but how to buzz my lips, control my embouchure, and
+      learn the many other techniques required to produce a nice-sounding tone. Instead of doing that, I wanted to create an instrument that skips all of those steps,
+      and hence The Lazy Trumpet was born!</p>
+
+      <p id="what">Instead of buzzing your lips, all you have to do is blow into the plastic tube in the front. Instead of tightening or loosening embouchure,
+      just turn the blue knob on the left. If you want that smooth muted trumpet sound without buying a mute, just move your hand close to the sensor in the back.
+      The only part of the controls that actually is the same as a acoustic trumpet is the three "valve" buttons on top, which control the pitches just like they
+      do on a normal trumpet.</p>
+
+    </div>
+
+    <div class="how">
+      <h2>How does is work?</h2>
+      <p id="how">The Lazy Trumpet is a digital instrument whose sound is controlled by the user's interaction with the sensors on the body. The sensors are all
+      soldered to PCBs and wired to an Arduino controller that plugs into the usb port of a computer running the Max patch that outputs the sound. The outputted
+      trumpet sounds are recordings of a MIDI solo trumpet patch from the Kontakt Factory Library. Each pitch was recorded in both a soft and loud velocity, and
+      the two versions are blended together with the ratio depending on how hard the user blows into the tube. The partials knob is divided into 6 segments and
+      there are 7 possible valve combinations which are given values 0-6. The combination of the knob position and valve button combination determines the note
+      that is played. The user must blow into the tube to activate the sound. Once a wind pressure threshold is reached, the user can freely adjust the
+      valve buttons and partials knob to produce any note in the instrument's range (E3 - Bb5). The last component is the distance sensor in the back, which allows
+      the user to produce muted trumpet sounds. Each note has a muted trumpet counterpart, and the two sounds are blended together with the ratio depending on how
+      close the user's hand is to the sensor (the closer to the sensor, the more muted). This component is meant to mimic an acoustic trumpet player inserting a
+      mute or their hand into the bell of their trumpet.</p>
+
+      <p>Parts and Materials Used</p>
+      <ul>
+        <li>Arduino Uno R3 Controller Board and Expansion Module</li>
+        <li>MPXV Pressure Sensor</li>
+        <li>Potentiometer</li>
+        <li>Small breadboard</li>
+        <li>VL53L1X Time-of-Flight Sensor</li>
+        <li>3x Buttons</li>
+        <li>Various PCBs, wires</li>
+        <li>Foam Core, tape</li>
+      </ul>
+    </div>
+
+    <div class="demo">
+      <h3>Demonstration</h3>
+      <p>Watch <a href="https://youtu.be/hHituZiaubk">DEMO</a> video here!</p>
+    </div>
+    <div class="code">
+      <h3>Source Code</h3>
+      <a href="https://github.com/ozur1/The-Lazy-Trumpet">Arduino Code and Max Patch</a>
+    </div>
+
+    <div class="future">
+      <h2>Moving Forward</h2>
+      <p id="future">There are two major aspects of this instrument that I hope to improve in the future. The first is that the sensor the user blows into in
+      a wind pressure sensor, not a wind speed sensor. Because of this, there is nowhere for the air to escape and it hurts my face to play after
+      a while. A wind speed sensor with a vent would make it more comfortable to play and still achieve the desired affect. The second aspect I hope
+      to improve upon is that at the present moment, the partials knob and valve buttons need to be changed with precise timing in order for the user to be
+      able to play smooth melodies. I hope to find a way to make the timing more lenient so that smoother melodies are easier to play.</p>
+    </div>
+
+
+  </body>
+</html>

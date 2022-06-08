@@ -1,0 +1,33 @@
+body {
+  background-color: #96daff;
+  margin-left: 50px;
+}
+
+#title {
+  text-align: center;
+  font-size: 50px;
+}
+#name {
+  text-align: center;
+  font-size: 30px;
+}
+#info {
+  text-align: center;
+}
+
+#what {
+  margin-right: 500px;
+}
+
+#how {
+  margin-right: 500px;
+}
+#how {
+  margin-right: 500px;
+}
+#future {
+  margin-right: 500px;
+}
+.images {
+  text-align: center;
+}
